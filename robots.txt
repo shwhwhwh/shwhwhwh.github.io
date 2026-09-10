@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shwhwhwh.github.io/sitemap.xml
