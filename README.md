@@ -1,6 +1,6 @@
 # NexusSpace
 
-Li Rui 的个人主页与博客。网站：https://shwhwhwh.github.io/
+Li Rui 的个人主页与博客。网站：https://heathcliffak.com/
 
 ## 修改内容
 
@@ -16,6 +16,6 @@ Li Rui 的个人主页与博客。网站：https://shwhwhwh.github.io/
 
 GitHub Settings → Pages → Deploy from a branch → main → /(root)。无需服务器、数据库或付费服务。
 
-旧 WordPress 文章路径通过 404.html 中的脚本跳转至对应文章；新站内部链接使用新的 HTML 地址。原域名需要另外绑定与修改 DNS，当前没有启用。
+旧 WordPress 文章路径通过 404.html 中的脚本跳转至对应文章；新站内部链接使用新的 HTML 地址。原域名 heathcliffak.com 已绑定 GitHub Pages；www 会转向主域名。
 
 原文来自 2026-09-10 的 WordPress 备份。仅迁移公开且无密码的页面与文章，不包含 WordPress 后台、数据库、草稿、密码和访问日志。原生动态评论不运行。
