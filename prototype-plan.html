@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototype Plan · NexusSpace</title>
+  <meta name="description" content="分享用 AI 构建的想法原型。体验 Research Nexus 与 Branch Canvas，查看演示、下载与源码，提交你自己的原型。">
+  <link rel="canonical" href="https://heathcliffak.com/prototype-plan.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/prototype-plan.css">
+  <script src="/prototype-plan.js" defer></script>
+</head>
+<body class="prototype-page">
+<a class="skip" href="#main">跳到内容</a>
+<header><nav class="nav" aria-label="Main navigation"><a class="brand" href="/">NexusSpace</a><div class="navlinks"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/prototype-plan.html" aria-current="page">Prototype Plan</a><a href="https://github.com/shwhwhwh">GitHub ↗</a></div></nav></header>
+<main id="main" class="prototype-main">
+  <section class="showcase-hero" aria-labelledby="showcase-title">
+    <div class="hero-copy"><p class="section-kicker"><span class="status-dot" aria-hidden="true"></span> PROTOTYPE PLAN / 想法的试验场</p>
+    <h1 id="showcase-title">把想法，做成<br><span>可以体验的原型。</span></h1>
+    <p class="hero-description">用 AI 把一个念头变成可运行的东西。先分享、体验、交流；让值得继续的想法，逐步走向更好的设计与工程。</p>
+    <div class="showcase-actions"><a class="showcase-button primary" href="#prototypes">探索原型 <span aria-hidden="true">↓</span></a><a class="showcase-button" href="#submit">提交你的原型 <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <aside class="hero-note" aria-label="关于这个计划"><span class="note-number">01 → ∞</span><p>一个想法，可以有很多种可能。</p><div class="hero-facts"><span><strong>02</strong> 首批原型</span><span>独立仓库<br>分别维护</span></div><a href="https://github.com/shwhwhwh/prototype-plan">打开总仓库 ↗</a></aside>
+  </section>
+
+  <section id="prototypes" aria-labelledby="collection-title">
+    <div class="collection-heading"><div><p class="section-kicker">THE COLLECTION</p><h2 id="collection-title">正在生长的原型</h2></div><p>先试试看，再一起把它做好。</p></div>
+
+    <article id="research-nexus" class="project-card rn-project" aria-labelledby="rn-title">
+      <div class="project-copy"><div class="project-identity"><span class="project-monogram rn-mark" aria-hidden="true">RN</span><span class="project-category">01 / 研究工作区</span></div>
+        <h3 id="rn-title">Research Nexus</h3><p class="project-tagline">让研究工具，回到同一个工作区。</p>
+        <p>把 alphaXiv、Zotero、OpenResearch 和 Google Drive 本地文件夹串进一套研究流程。从收藏论文、整理元信息，到归档 PDF，用系统模板减少反复切换。</p>
+        <ul class="project-points"><li>第一套文献研究模板：导入、配置、归档与去重。</li><li>源码包含 DIY 设计器 Beta，可尝试搭建自己的流程。</li></ul>
+        <div class="project-release"><span class="version-tag">v0.3.0 预览版</span><span>Windows 源码预览</span></div>
+        <div class="showcase-actions"><a class="showcase-button primary" href="https://github.com/shwhwhwh/research-nexus/releases/download/v0.3.0/literature-workspace.rn-system.json">下载系统模板 <span aria-hidden="true">↓</span></a><a class="showcase-button" href="https://github.com/shwhwhwh/research-nexus">项目仓库 ↗</a></div>
+        <p class="project-install">模板需先安装 RN 后导入，当前没有桌面安装器。<a href="https://github.com/shwhwhwh/research-nexus#install-rn-windows-source-preview">查看安装说明</a> · <a href="https://github.com/shwhwhwh/research-nexus/releases/tag/v0.3.0">发行页面</a></p>
+        <div class="project-rights"><p>Created by <a href="https://github.com/shwhwhwh">Rui Li (@shwhwhwh)</a><br>Copyright © 2026 Rui Li. <a href="https://github.com/shwhwhwh/research-nexus/blob/main/LICENSE">MIT License</a>.</p><p>允许按 MIT 许可扩展与再分发，请保留版权和许可声明。</p></div>
+      </div>
+      <div class="project-demo"><div class="demo-heading"><span class="demo-live-dot" aria-hidden="true"></span><span>系统模板 01 · 产品演示</span><span class="demo-runtime">MP4</span></div>
+        <video id="rn-demo-video" controls playsinline preload="metadata" poster="/assets/prototypes/rn-demo-poster.png" aria-label="Research Nexus 系统模板演示" aria-describedby="rn-demo-caption"><source src="/assets/prototypes/research-nexus-system-demo.mp4" type="video/mp4">浏览器无法播放视频，请使用下方视频下载链接。</video>
+        <div class="demo-caption"><div class="demo-video-actions"><button id="rn-video-toggle" type="button" aria-controls="rn-demo-video">播放演示</button><a href="/assets/prototypes/research-nexus-system-demo.mp4" download>下载演示视频 ↗</a><span id="rn-video-status" role="status"></span></div><p id="rn-demo-caption">使用隔离的虚构数据录制：RN 归档引擎实际运行，外部账号与第三方应用采用模拟服务 / 示意界面。视频展示 v0.3.0 系统模板，不展示 DIY Beta。</p>
+        <details><summary>演示内容文字版</summary><ol><li>导入文献研究模板，配置自己的账号与本地工具。</li><li>通过 RN 引擎归档两篇虚构论文，保存元信息、来源笔记和 PDF。</li><li>重复执行，验证不会产生重复条目。</li><li>在统一工作区中继续阅读与研究；第三方应用画面为明确标注的示意。</li></ol></details></div>
+      </div>
+    </article>
+
+    <article id="branch-canvas" class="project-card bc-project" aria-labelledby="bc-title">
+      <div class="project-copy"><div class="project-identity"><span class="project-monogram bc-mark" aria-hidden="true">BC</span><span class="project-category">02 / 对话探索</span></div>
+        <h3 id="bc-title">Branch Canvas</h3><p class="project-tagline">让一次回答，长出不同的思路。</p>
+        <p>把 Codex 对话变成一棵可以浏览的树。从同一回答创建多条追问，在不同路径间切换，用原生聊天继续阅读完整回答。</p>
+        <ul class="project-points"><li>跟随当前本机聊天，增量同步已完成问答。</li><li>连续追问复用 thread，真正分叉时才创建新 thread。</li><li>父子节点折叠、搜索、滚轮平移与回到顶部。</li></ul>
+        <div class="project-release"><span class="version-tag">v0.1.0</span><span>Codex 本地插件 · Windows</span></div>
+        <div class="showcase-actions"><a class="showcase-button primary" href="https://github.com/shwhwhwh/codex-branch-canvas/releases/download/v0.1.0/codex-branch-canvas-v0.1.0-windows.zip">下载插件 ZIP <span aria-hidden="true">↓</span></a><a class="showcase-button" href="https://github.com/shwhwhwh/codex-branch-canvas">项目仓库 ↗</a></div>
+        <p class="project-install">需要 Node.js 24+、已登录的兼容 Codex CLI，以及支持本地插件面板的桌面端。<a href="https://github.com/shwhwhwh/codex-branch-canvas#readme">安装与使用说明</a> · <a href="https://github.com/shwhwhwh/codex-branch-canvas/releases/tag/v0.1.0">发行页面</a></p>
+        <div class="project-rights"><p>Created by <a href="https://github.com/shwhwhwh">Rui Li (@shwhwhwh)</a><br>Copyright © 2026 Rui Li. <a href="https://github.com/shwhwhwh/codex-branch-canvas/blob/main/LICENSE">All rights reserved.</a></p><p>保留全部权利。扩展、复制或再分发原代码前，请先取得作者许可；第三方依赖保留各自许可。</p></div>
+      </div>
+      <div class="project-demo bc-demo" id="bc-demo"><div class="demo-heading"><span class="demo-live-dot" aria-hidden="true"></span><span>Branch Canvas · 交互示意</span><button class="demo-reset" type="button" id="bc-reset">重置</button></div>
+        <p class="bc-demo-label">虚构问答 · 预置回复 · 不调用模型</p>
+        <div class="bc-demo-tree" id="bc-demo-tree" aria-label="可交互的示例对话树"></div>
+        <div class="bc-demo-detail"><p class="demo-path" id="bc-demo-path">共同起点</p><h4 id="bc-demo-question">怎样探索一个想法？</h4><p id="bc-demo-answer">把每轮问答保存为节点，从一个回答探索不同方向。</p></div>
+        <form class="bc-demo-form" id="bc-demo-form"><label for="bc-demo-input">从选中的回答继续追问</label><div><input id="bc-demo-input" maxlength="80" placeholder="例如：怎样给分支命名？" autocomplete="off"><button type="submit">＋ 添加演示分支</button></div><p id="bc-demo-status" role="status" aria-live="polite">点击节点查看，再点击 ＋ 从同一回答创建不同分支。</p></form>
+        <noscript><p class="demo-caption">此交互示意需要 JavaScript。真实插件的下载和文档链接仍可使用。</p></noscript>
+      </div>
+    </article>
+  </section>
+
+  <section id="submit" class="submit-prototype" aria-labelledby="submit-title"><div><p class="section-kicker">YOUR IDEA COULD BE NEXT</p><h2 id="submit-title">下一个原型，<br>也许就是你的想法。</h2><p>一个有趣的问题，一段可以运行的尝试，就可以成为交流的起点。你保留自己的署名与归属，我们一起寻找它值得继续的方向。</p></div>
+    <div class="submission-card"><h3>把原型带到这里</h3><ol><li>说明它想解决什么问题、现在能做什么。</li><li>提供独立仓库、演示和可复现的运行方法。</li><li>标注 AI 辅助方式、已知限制，以及明确的版权和许可。</li></ol><a class="showcase-button primary" href="https://github.com/shwhwhwh/prototype-plan/issues/new?template=prototype.yml">提交新原型 ↗</a><p class="submission-note">通过 GitHub 表单提交，需要登录 GitHub。提交后由维护者审核收录，不会自动转移你的权利。</p><p>还没有可运行的原型？<a href="https://github.com/shwhwhwh/prototype-plan/discussions">先来讨论想法 ↗</a></p></div>
+  </section>
+  <div class="showcase-footnote"><p>每个项目都有自己的仓库、作者与许可证。本页的展示与收录，不代表统一开源授权，也不代表原型已完成生产环境验收。</p><a href="https://github.com/shwhwhwh/prototype-plan/blob/main/CONTRIBUTING.md">收录与贡献指南 ↗</a></div>
+</main>
+<footer><span>© 2026 Li Rui · NexusSpace</span><a href="https://github.com/shwhwhwh/prototype-plan">Prototype Plan 总仓库 ↗</a></footer>
+</body></html>

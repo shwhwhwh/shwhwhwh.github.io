@@ -1,0 +1,14 @@
+Prototype Plan showcase media
+
+Research Nexus demo video and poster:
+Copyright (c) 2026 Rui Li (@shwhwhwh).
+Source: https://github.com/shwhwhwh/research-nexus/releases/tag/v0.3.0
+Poster: https://github.com/shwhwhwh/research-nexus/blob/main/docs/assets/demo-poster.png
+MIT License; complete text is included in research-nexus-LICENSE.txt.
+The video uses isolated fixture data and labeled simulated third-party views.
+
+Branch Canvas interactive illustration:
+Original fictional demonstration created for the project owner's showcase.
+Copyright (c) 2026 Rui Li (@shwhwhwh). All rights reserved.
+It does not call a model, load user conversations, or grant an open-source license
+to the original Branch Canvas code. Third-party licenses remain unaffected.
