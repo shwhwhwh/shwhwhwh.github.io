@@ -30,3 +30,7 @@ GitHub Settings → Pages → Deploy from a branch → main → /(root)。无需
 展示地址：https://heathcliffak.com/prototype-plan.html 。目前 RN 链接固定到 v0.3.0 模板与演示，BC 固定到 v0.1.0 Windows 插件。更新时核对实际发行资源与安装说明，并保留每个项目的版权和许可。RN 使用 MIT，BC 保留全部权利。提交入口使用 Prototype Plan 的 GitHub 原型表单，需要登录 GitHub，提交后由维护者审核。
 
 新增原型：按现有详情页创建独立 HTML 页面，在 `prototype-plan.html` 增加带 `data-category` 和 `data-search` 的 `.prototype-tile` 卡片，并更新原型数量和 sitemap.xml。搜索索引只写公开信息；各项目仍保留自己的版权与许可。旧目录锚点 `#research-nexus`、`#branch-canvas` 保留在对应卡片上。
+
+## 项目衍生树
+
+目录和两张详情页加载 `prototype-lineage.css/js`。原型快照在 `assets/prototypes/lineage.json`，由维护者实查生成。网页只读获取 Prototype Plan 最新主分支 CI 结果与对应提交的 `projects.json`，通过的来源关系自动长成树；不会向任何仓库写入。超过 50 小时、检查未通过或网络不可用时，隐藏衍生节点并显示原型快照时间。登记入口与 CI 规则由总仓库维护。所有节点链接必须是规范 GitHub HTTPS 仓库地址。
