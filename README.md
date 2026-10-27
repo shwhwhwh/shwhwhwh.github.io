@@ -27,7 +27,7 @@ GitHub Settings → Pages → Deploy from a branch → main → /(root)。无需
 
 ## 维护原型展示
 
-展示地址：https://heathcliffak.com/prototype-plan.html 。当前下载固定到 RN v0.7.1 Windows 源码包与 BC v0.1.1 预构建 Windows 插件，详情页提供环境要求、安装命令、升级备份和校验链接。旧 Releases 已转为草稿撤下公开下载，历史 MIT 视频仅作为明确标注的功能示意。更新时核对实际发行资源与安装说明，并保留每个项目的版权和许可。RN/BC 的后续新原创内容保留全部权利，个人学习/非商业试验免费，商业化另行书面授权；历史 RN MIT 代码、模板和视频保留原许可，BC v0.1.0 旧包保持原条款。提交入口使用 Prototype Plan 的 GitHub 原型表单，需要登录 GitHub，提交后由维护者审核。
+展示地址：https://heathcliffak.com/prototype-plan.html 。当前下载固定到 RN v0.7.1 Windows 源码包与 BC v0.1.2 预构建 Windows 插件，详情页提供环境要求、安装命令、升级备份和校验链接。旧 Releases 已转为草稿撤下公开下载，历史 MIT 视频仅作为明确标注的功能示意。更新时核对实际发行资源与安装说明，并保留每个项目的版权和许可。RN/BC 的后续新原创内容保留全部权利，个人学习/非商业试验免费，商业化另行书面授权；历史 RN MIT 代码、模板和视频保留原许可，BC v0.1.0 旧包保持原条款。提交入口使用 Prototype Plan 的 GitHub 原型表单，需要登录 GitHub，提交后由维护者审核。
 
 新增原型：按现有详情页创建独立 HTML 页面，在 `prototype-plan.html` 增加带 `data-category` 和 `data-search` 的 `.prototype-tile` 卡片，并更新原型数量和 sitemap.xml。搜索索引只写公开信息；各项目仍保留自己的版权与许可。旧目录锚点 `#research-nexus`、`#branch-canvas` 保留在对应卡片上。
 
