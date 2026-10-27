@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branch Canvas / Prototype Plan · NexusSpace</title><meta name="description" content="Branch Canvas：项目介绍、演示、下载、安装说明与版权许可。">
+<link rel="canonical" href="https://heathcliffak.com/prototype-branch-canvas.html"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/prototype-plan.css"><script src="/prototype-plan.js" defer></script></head>
+<body class="prototype-page prototype-detail"><a class="skip" href="#main">跳到内容</a><header><nav class="nav" aria-label="Main navigation"><a class="brand" href="/">NexusSpace</a><div class="navlinks"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/prototype-plan.html" aria-current="page">Prototype Plan</a><a href="https://github.com/shwhwhwh">GitHub ↗</a></div></nav></header>
+<main id="main" class="prototype-main"><nav class="detail-breadcrumb" aria-label="面包屑"><a href="/prototype-plan.html">← 全部原型</a><span aria-hidden="true">/</span><span>Branch Canvas</span></nav>
+<p class="section-kicker detail-kicker">PROTOTYPE PLAN / 原型详情</p>
+    <article id="branch-canvas" class="project-card bc-project" aria-labelledby="bc-title">
+      <div class="project-copy"><div class="project-identity"><span class="project-monogram bc-mark" aria-hidden="true">BC</span><span class="project-category">02 / 对话探索</span></div>
+        <h1 id="bc-title">Branch Canvas</h1><p class="project-tagline">让一次回答，长出不同的思路。</p>
+        <p>把 Codex 对话变成一棵可以浏览的树。从同一回答创建多条追问，在不同路径间切换，用原生聊天继续阅读完整回答。</p>
+        <ul class="project-points"><li>跟随当前本机聊天，增量同步已完成问答。</li><li>连续追问复用 thread，真正分叉时才创建新 thread。</li><li>父子节点折叠、搜索、滚轮平移与回到顶部。</li></ul>
+        <div class="project-release"><span class="version-tag">v0.1.0</span><span>Codex 本地插件 · Windows</span></div>
+        <div class="showcase-actions"><a class="showcase-button primary" href="https://github.com/shwhwhwh/codex-branch-canvas/releases/download/v0.1.0/codex-branch-canvas-v0.1.0-windows.zip">下载插件 ZIP <span aria-hidden="true">↓</span></a><a class="showcase-button" href="https://github.com/shwhwhwh/codex-branch-canvas">项目仓库 ↗</a></div>
+        <p class="project-install">需要 Node.js 24+、已登录的兼容 Codex CLI，以及支持本地插件面板的桌面端。<a href="https://github.com/shwhwhwh/codex-branch-canvas#readme">安装与使用说明</a> · <a href="https://github.com/shwhwhwh/codex-branch-canvas/releases/tag/v0.1.0">发行页面</a></p>
+        <div class="project-rights"><p>Created by <a href="https://github.com/shwhwhwh">Rui Li (@shwhwhwh)</a><br>Copyright © 2026 Rui Li. <a href="https://github.com/shwhwhwh/codex-branch-canvas/blob/main/LICENSE">All rights reserved.</a></p><p>保留全部权利。扩展、复制或再分发原代码前，请先取得作者许可；第三方依赖保留各自许可。</p></div>
+      </div>
+      <div class="project-demo bc-demo" id="bc-demo"><div class="demo-heading"><span class="demo-live-dot" aria-hidden="true"></span><span>Branch Canvas · 交互示意</span><button class="demo-reset" type="button" id="bc-reset">重置</button></div>
+        <p class="bc-demo-label">虚构问答 · 预置回复 · 不调用模型</p>
+        <div class="bc-demo-tree" id="bc-demo-tree" aria-label="可交互的示例对话树"></div>
+        <div class="bc-demo-detail"><p class="demo-path" id="bc-demo-path">共同起点</p><h4 id="bc-demo-question">怎样探索一个想法？</h4><p id="bc-demo-answer">把每轮问答保存为节点，从一个回答探索不同方向。</p></div>
+        <form class="bc-demo-form" id="bc-demo-form"><label for="bc-demo-input">从选中的回答继续追问</label><div><input id="bc-demo-input" maxlength="80" placeholder="例如：怎样给分支命名？" autocomplete="off"><button type="submit">＋ 添加演示分支</button></div><p id="bc-demo-status" role="status" aria-live="polite">点击节点查看，再点击 ＋ 从同一回答创建不同分支。</p></form>
+        <noscript><p class="demo-caption">此交互示意需要 JavaScript。真实插件的下载和文档链接仍可使用。</p></noscript>
+      </div>
+    </article>
+<div class="detail-next"><a href="/prototype-plan.html">← 返回原型目录</a><a href="/prototype-research-nexus.html">探索 Research Nexus →</a></div>
+  <div class="showcase-footnote"><p>每个项目都有自己的仓库、作者与许可证。本页的展示与收录，不代表统一开源授权，也不代表原型已完成生产环境验收。</p><a href="https://github.com/shwhwhwh/prototype-plan/blob/main/CONTRIBUTING.md">收录与贡献指南 ↗</a></div></main><footer><span>© 2026 Li Rui · NexusSpace</span><a href="https://github.com/shwhwhwh/prototype-plan">Prototype Plan 总仓库 ↗</a></footer></body></html>
