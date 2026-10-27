@@ -5,3 +5,5 @@
 
 /* Independent prototype detail pages retain the original showcase and demos. */
 .prototype-detail .prototype-main{padding-top:32px}.detail-breadcrumb{display:flex;gap:12px;font-size:12px;color:#788996;margin-bottom:30px}.detail-breadcrumb a{text-decoration:none}.detail-kicker{margin-bottom:18px}.prototype-detail .project-card h1{font-size:29px;line-height:1.3;margin:0 0 9px;letter-spacing:-.04em}.detail-next{display:flex;justify-content:space-between;gap:20px;font-size:12px;margin:32px 0 42px;flex-wrap:wrap}
+
+.prototype-detail .project-rights{font-size:12px;line-height:1.85}.project-rights strong{color:#4b5d6a}.project-rights .license-history-note{border-left:2px solid #b6a588;padding-left:10px;margin-top:12px}

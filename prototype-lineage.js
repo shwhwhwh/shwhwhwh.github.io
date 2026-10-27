@@ -3,6 +3,7 @@
   if (!hosts.length) return;
   const repoPattern = /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
   const shaPattern = /^[a-f0-9]{40}$/;
+  const licenseLabel = value => value === 'LicenseRef-Prototype-Plan-Personal-Noncommercial-1.0' ? '保留权利 · 学习/非商业免费 · 商用另授权' : value;
   const source = 'https://api.github.com/repos/shwhwhwh/prototype-plan/actions/workflows/lineage.yml/runs?branch=main&per_page=10';
   let baseline;
   function safeProjects(data) {
@@ -12,7 +13,7 @@
       if (!/^[a-z][a-z0-9-]{1,70}$/.test(p.id) || ids.has(p.id) || !repoPattern.test(p.repository)
         || !shaPattern.test(p.commit) || typeof p.owner !== 'string' || p.owner.length > 160
         || typeof p.name !== 'string' || p.name.length > 100 || typeof p.license !== 'string'
-        || !(p.parentId === null || typeof p.parentId === 'string') || repos.has(p.repository.toLowerCase())) throw Error('Invalid project');
+        || !(p.parentId === null || typeof p.parentId === 'string') || (p.parentCommit !== undefined && !shaPattern.test(p.parentCommit)) || repos.has(p.repository.toLowerCase())) throw Error('Invalid project');
       ids.set(p.id, p); repos.add(p.repository.toLowerCase());
     }
     for (const p of data.projects) {
@@ -84,7 +85,8 @@
     const list = host.querySelector('.lineage-project-list'); list.replaceChildren();
     for (const p of selected) {
       const item = el('li'), link = el('a', '', p.name + ' ↗'); link.href = p.repository; link.target = '_blank'; link.rel = 'noopener noreferrer';
-      item.append(link, el('span', '', p.owner + ' · ' + p.license + ' · ' + (p.parentId ? '衍生自 ' + nodes.get(p.parentId).name : '原始原型'))); list.append(item);
+      const sourceVersion = p.parentId ? ' · 来源 ' + (p.parentCommit || nodes.get(p.parentId).commit).slice(0, 7) : '';
+      item.append(link, el('span', '', p.owner + ' · ' + licenseLabel(p.license) + ' · ' + (p.parentId ? '衍生自 ' + nodes.get(p.parentId).name : '原始原型') + sourceVersion)); list.append(item);
     }
     const derivatives = selected.filter(p => p.parentId !== null).length;
     host.querySelector('.lineage-count').textContent = `${roots.length} 个原型 · ${derivatives} 个已登记衍生项目`;
@@ -110,7 +112,7 @@
       if (!run || run.status !== 'completed' || run.conclusion !== 'success' || !shaPattern.test(run.head_sha)
         || Date.now() - new Date(run.updated_at).getTime() > 50 * 3600000 || new Date(run.updated_at).getTime() > Date.now() + 300000) throw Error('No current passed check');
       const registry = await json(`https://raw.githubusercontent.com/shwhwhwh/prototype-plan/${run.head_sha}/projects.json`);
-      if (registry.schemaVersion !== 2) throw Error('Unsupported registry');
+      if (![2, 3].includes(registry.schemaVersion)) throw Error('Unsupported registry');
       const projects = safeProjects(registry);
       for (const original of snapshot.projects) {
         const entry = projects.find(p => p.id === original.id);
@@ -121,6 +123,7 @@
         projects: projects.map(p => ({ ...p, status: 'passed' })) };
       for (const host of hosts) paint(host, report, 'live');
     } catch (error) {
+      console.warn('Prototype Plan lineage refresh fallback:', error.message, error.status || 'network');
       if (!baseline) for (const host of hosts) host.querySelector('.lineage-status').textContent = '暂时无法读取来源数据；请使用下方登记与检查链接。';
       else if (error.status === 404) for (const host of hosts) host.querySelector('.lineage-status').textContent = `自动检查待启用 · 人工核验 ${readableTime(baseline.checkedAt)} · 衍生节点暂不展示`;
     } finally { for (const host of hosts) host.querySelector('.lineage-refresh').disabled = false; }
