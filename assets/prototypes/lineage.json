@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "automationState": "awaiting-workflow-authorization",
   "checkedAt": "2026-10-27T06:29:22.725Z",
   "scope": "registered commits and current default-branch attribution files",
   "projects": [

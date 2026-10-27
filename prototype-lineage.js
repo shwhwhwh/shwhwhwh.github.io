@@ -40,7 +40,7 @@
     });
     const status = host.querySelector('.lineage-status');
     status.textContent = mode === 'live' ? `自动检查通过 · ${readableTime(report.checkedAt)}`
-      : `人工核验快照 · ${readableTime(report.checkedAt)} · 暂不展示未经实时确认的衍生项目`;
+      : `${report.automationState === 'awaiting-workflow-authorization' ? '自动检查待授权启用 · ' : ''}人工核验快照 · ${readableTime(report.checkedAt)} · 暂不展示未经实时确认的衍生项目`;
     host.dataset.mode = mode;
     const roots = selected.filter(p => p.parentId === null), nodes = new Map(selected.map(p => [p.id, { ...p, children: [] }]));
     for (const node of nodes.values()) if (node.parentId && nodes.has(node.parentId)) nodes.get(node.parentId).children.push(node);
