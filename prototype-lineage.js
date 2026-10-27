@@ -3,7 +3,7 @@
   if (!hosts.length) return;
   const repoPattern = /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
   const shaPattern = /^[a-f0-9]{40}$/;
-  const licenseLabel = value => value === 'LicenseRef-Prototype-Plan-Personal-Noncommercial-1.0' ? '保留权利 · 学习/非商业免费 · 商用另授权' : value;
+  const licenseLabel = value => ['LicenseRef-Prototype-Plan-Personal-Noncommercial-1.0','LicenseRef-Prototype-Plan-Personal-Noncommercial-1.1'].includes(value) ? '保留权利 · 学习/非商业免费 · 商用另授权' : value;
   const source = 'https://api.github.com/repos/shwhwhwh/prototype-plan/actions/workflows/lineage.yml/runs?branch=main&per_page=10';
   let baseline;
   function safeProjects(data) {
