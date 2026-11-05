@@ -1,0 +1,33 @@
+/* Article-specific styles keep the existing site layout and other posts intact. */
+.math-post { overflow-wrap: anywhere; }
+.math-post > p > img { margin: 28px auto; max-width: min(100%, 640px); }
+.math-post img { height: auto; object-fit: contain; }
+.math-post .figure-stack { display: grid; gap: 24px; margin: 32px 0; }
+.math-post .figure-stack figure { margin: 0; text-align: center; }
+.math-post .figure-stack img { margin: 0 auto 8px; width: 100%; max-width: 600px; }
+.math-post .figure-stack figure:first-child img { max-width: 480px; }
+.math-post figcaption { font-size: 14px; color: var(--muted); text-align: center; }
+.math-post .figure-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: center; gap: 16px; margin: 32px 0; }
+.math-post .figure-pair figure { margin: 0; min-width: 0; }
+.math-post .figure-pair img { width: 100%; }
+.math-post li p { margin-bottom: 12px; }
+.math-post img[alt="结尾漫画人物反应"] { max-width: min(100%, 300px); }
+@media (max-width: 480px) {
+  .math-post .figure-pair { gap: 8px; }
+}
+@page { size: A4; margin: 16mm 18mm; }
+@media print {
+  header, footer, .skip, .math-post > a, .math-post > .meta { display: none; }
+  .math-post { max-width: none; padding: 0; font-size: 10.5pt; }
+  .math-post p { line-height: 1.65; margin: 2.3mm 0; }
+  .math-post h1, .math-post h2 { break-after: avoid; }
+  .math-post p, .math-post li { orphans: 2; widows: 2; }
+  .math-post img { max-height: 125mm; width: auto; margin: 3mm auto; }
+  .math-post p:has(> img:only-child), .math-post figure, .math-post .figure-stack, .math-post .figure-pair { break-inside: avoid; }
+  .math-post .figure-stack { gap: 2mm; margin: 3mm 0; }
+  .math-post .figure-stack figure:first-child img { max-height: 38mm; }
+  .math-post .figure-stack figure:last-child img { max-height: 105mm; }
+  .math-post .figure-pair img { width: 100%; max-height: 48mm; }
+  .math-post img[alt="无人在意"] { max-height: 78mm; }
+  .math-post img[alt="结尾漫画人物反应"] { max-height: 25mm; }
+}
