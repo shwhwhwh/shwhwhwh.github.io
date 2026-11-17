@@ -22,7 +22,7 @@
         if (seen.has(node.id)) throw Error('Cycle'); seen.add(node.id);
         node = ids.get(node.parentId); if (!node) throw Error('Missing parent');
       }
-      if (!['research-nexus', 'branch-canvas'].includes(node.id)) throw Error('Unknown original');
+      if (!['research-nexus', 'branch-canvas', 'task-pop'].includes(node.id)) throw Error('Unknown original');
     }
     return data.projects;
   }
